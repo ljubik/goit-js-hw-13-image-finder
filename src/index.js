@@ -1,7 +1,7 @@
 import css from "./css/styles.css";
 // import fetchObject from "./js/fetch.js";
 import newCard from './js/apiService.js';
-import paganation from './js/pagination.js';
+import pagination from './js/pagination.js';
 import renderItems from './js/render.js';
 import refs  from "./js/refs.js";
 
@@ -10,13 +10,13 @@ refs.paginationRef.addEventListener('click', onPaginationsBtnClick);
 
 function galleryOnSubmit(e) {
   e.preventDefault();
-  paganation.setTotalItems(newCard.totalItems);
+  pagination.setTotalItems(newCard.totalItems);
 
   const form = e.currentTarget;
   newCard.query = form.elements.query.value;
 
   refs.gallery.innerHTML = '';
-  paganation.movePageTo(1);
+  pagination.movePageTo(1);
   form.reset();
   newCard.reset();
   renderItems();
@@ -31,6 +31,6 @@ function onPaginationsBtnClick() {
 }
 
 function getCurrentPage() {
-  const currentTarget = paganation.getCurrentPage();
+  const currentTarget = pagination.getCurrentPage();
   newCard.newPage = currentTarget;
 }
