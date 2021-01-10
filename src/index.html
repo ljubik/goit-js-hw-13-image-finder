@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Image finder</title>
+</head>
+<body>
+  <header>
+    <h1>Image finder v1.1</h1>
+  </header>
+  <main>
+
+    <form class="search-form" id="search-form">
+      <label>Введіть ваш запит
+        <input type="text" name="query" id="query" autocomplete="off" placeholder="Search images...">
+      </label>
+      <button class="searchBtn" type="submit">search</button>
+    </form>
+    <article class="article">
+      <h2>РЕЗУЛЬТАТ</h2>
+      <ul class="gallery">
+        <!-- Список <li> с карточками изображений -->
+      </ul>
+      <button class="loadMore isHiden">load more</button>
+      <div id="pagination" class="tui tui tui-pagination"></div>
+    </article>
+  </main>
+
+</body>
+</html>
